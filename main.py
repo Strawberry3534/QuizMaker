@@ -195,7 +195,7 @@ def getCoverInfo():
     positionDown = int(win.winfo_screenheight()/2 - windowHeight/2)
     win.geometry("+{}+{}".format(positionRight-175, positionDown-100))
     values_returned = []
-    label1 = Label(win,text="NET455",font=("Arial",24))
+    label1 = Label(win,text="ICS4U",font=("Arial",24))
     label2 = Label(win,text="Enter the amount of time in minutes for this quiz")
     label3 = Label(win,text="Enter the weight of the quiz in percent here")
     label4 = Label(win,text="Enter the name of the quiz/test")
@@ -236,10 +236,10 @@ def getCoverInfo():
 
 
 def coverTitle(quiz,courseName,quiznum,minutes,percentage,questions):
-    net455 = quiz.add_paragraph()
-    net455styles = quiz.styles
+    ics = quiz.add_paragraph()
+    icsstyles = quiz.styles
     try:
-        font_charstyle = net455styles.add_style('CommentsStyle', WD_STYLE_TYPE.CHARACTER)
+        font_charstyle = icsstyles.add_style('CommentsStyle', WD_STYLE_TYPE.CHARACTER)
     except:
         ValueError
         font_charstyle = quiz.styles["CommentsStyle"]
@@ -247,9 +247,9 @@ def coverTitle(quiz,courseName,quiznum,minutes,percentage,questions):
     font_object = font_charstyle.font
     font_object.size = Pt(20)
     font_object.name = 'Times New Roman'
-    net455.add_run("\n"+courseName+"\n"+quiznum,style="CommentsStyle").bold=True
-    net455.alignment = 1 
-    net455.paragraph_format.line_spacing = Inches(0.6)
+    ics.add_run("\n"+courseName+"\n"+quiznum,style="CommentsStyle").bold=True
+    ics.alignment = 1 
+    ics.paragraph_format.line_spacing = Inches(0.6)
     cover_title = quiz.add_paragraph(percentage+" of Final Grade\n"+minutes+" minutes\n"+questions+" Marks\nClass Section __________________\nFirst Name   __________________\nLast Name   __________________\nStudent #   __________________\nDate      __________________")    
     run = cover_title.add_run("\nInstructions")
     run.underline = True
