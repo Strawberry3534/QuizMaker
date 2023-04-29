@@ -23,7 +23,7 @@ import time
 
 all_questions = []
 chapterIndex = 5
-COURSE_NAME = "NET455"
+COURSE_NAME = "ICS4U"
 TEST_NAME = ""
 TEST_WEIGHT = ""
 TEST_TIME_LIMIT = ""
@@ -744,7 +744,7 @@ moreEntriesButton = Button(root, text="More Entries",command=moreEntries,width=1
 resetButton = Button(root, text="Clear Entries",command=clearEntries,width=15)
 closeButton = Button(root,text="Close",command=lambda:root_on_closing(),width=10)
 
-courseLabel = Label(root,text="Course Name: NET455",anchor="w",font=("Arial",15))
+courseLabel = Label(root,text="Course Name: "ICS4U",anchor="w",font=("Arial",15))
 instructLabel = Label(root,text="Pick questions from range of each chapter.",anchor="w",font=("Arial",15))
 noteLabel = Label(root,text="Note: Pick from the dropdown list of chapters. Do not input.",anchor="w",font=("Arial",11))
 
